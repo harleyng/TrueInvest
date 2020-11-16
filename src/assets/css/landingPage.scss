@@ -1,0 +1,263 @@
+@import 'base';
+
+/* Contents
+General Settings
+1. Cover
+2. About
+3. Course
+4. Teacher
+5. Testimonial
+*/
+
+@import "color";
+.landingpage {
+  .section-title{
+    margin-bottom: 80px;
+    span{
+      border-bottom: $theme-color 4px solid;
+      width: 100%;
+    }
+  } 
+  
+  /* //////////////////// 1.COVER ///////////////////// */
+  #cover {
+    background-image: radial-gradient($theme-color, $dark-green 80%);
+    color: #fff;
+    .stock-index {
+      padding: 0 7vw;
+      .up {
+        color: $theme-color;
+      }
+      .down {
+        color: $yellow;
+      }
+    }
+    .cover-img {
+      img {
+        width: 100%;
+      }
+    }
+    .cover-content {
+      padding-right: 7vw;
+    }
+    .eng-name {
+      background: url('../img/landingpage/green-arrow.png');
+      background-size: 100% 100%;
+      padding: 15px 15px 8px; //fix later
+    }
+    
+    .viet-name {
+      background: url('../img/landingpage/yellow-arrow.png');
+      background-size: 100% 100%;
+      color: $dark-green;
+      padding: 8px 15px 15px; //fix later
+      font-weight: 800;
+    }
+    .research-more {
+      text-align: center;
+      button {
+        color: #fff;
+        font-weight: bold;
+        background-color: $dark-green;
+        border: none;
+        padding: 10px 25px;
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        &:hover {
+          background-color: $theme-color;
+          color: #fff;
+        }
+      }
+    }
+  }
+  
+  /* //////////////////// 2.ABOUT ///////////////////// */
+  #about {
+    .brief-description {
+      position: relative;
+      padding: 0 10vw;
+      &::after {
+        content: '';
+        background-color: $theme-color;
+        height: 6px;
+        width: 10%;
+        position: absolute;
+        bottom: 0;
+      }
+      .brief-description-content {
+        h2 {
+          color: $theme-color;
+        }
+        h4 {
+          color: $dark-green;
+        }
+      }
+      .brief-description-img {
+        background: url('../img/landingpage/about.jpg');
+        background-size: cover;
+        &::before {
+          content: '';
+          position: absolute;
+          height: 100%;
+          width: 30%;
+          background-image: linear-gradient(to right, rgba(255,255,255,1), rgba(255, 255, 255, 0));
+        }
+      }
+    }
+    .detail-description {
+      margin-top: 100px;
+      .detail-description-content {
+        margin-top: 100px;
+        .detail-description-section {
+          width: 30%;
+          border: $light-gray 1px solid;
+          padding: 10px 40px;
+        }
+        .detail-description-content-logo {
+          position: relative;
+          img {
+            width: 40%;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -60%);
+          }
+        }
+        .detail-description-section-title {
+          padding-top: 30% !important;
+        }
+      }
+    }
+  }
+  
+  /* //////////////////// 3.COURSE ///////////////////// */
+  #course {
+    .course-content {
+      .course-item {
+        box-shadow:   0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+        0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 21.8px 33.4px rgba(0, 0, 0, 0.086),
+        0 10px 80px rgba(0, 0, 0, 0.12);
+        %course-item-img {
+          height: 30vh;
+          min-height: 120px;
+          max-height: 200px;
+          background-size: cover !important;
+          position: relative;
+        }
+        .skew {
+          text-align: center;
+          color: $theme-color;
+          background-color: #000;
+          transform: skew(20deg) translateX(5%);
+          width: 90%;
+          position: absolute;
+          bottom: 10%;
+        }
+        .inv-skew {
+          transform: skew(-20deg);
+          font-weight: bolder;
+          padding: 10px 0;
+        }
+        .read-financial-report {
+          @extend %course-item-img;
+          background: url('../img/landingpage/read-financial-report.png');
+        }
+        .invest-gain-dividend {
+          @extend %course-item-img;
+          background: url('../img/landingpage/invest-gain-dividend.png');
+        }
+        .investor {
+          @extend %course-item-img;
+          background: url('../img/landingpage/investor.png');
+  
+        }
+        .pro-trader-20 {
+          @extend %course-item-img;
+          background: url('../img/landingpage/pro-trader-20.png');
+        }
+        .course-item-content {
+          height: 18vh;
+        }
+        .course-button {
+          border-top: $light-gray 1px solid;
+          padding: 30px 0;
+          display: block;
+          button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 20px;
+            color: #fff;
+            background-color: $theme-color;
+            font-weight: bold;
+            &:hover {
+              background-color: $dark-green;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  /* //////////////////// 4.TEACHER ///////////////////// */
+  #teacher {
+    .teacher-img img {
+      width: 100%;
+    }
+    .teacher-content-wrap {
+      margin: auto 0;
+      padding: 0 5%;
+      h3 {
+        color: $dark-green;
+        padding-bottom: 1.2em;
+        span {
+          border-bottom: $theme-color 4px solid;
+          padding-bottom: 0.2em;
+        }
+      }
+      .teacher-contact {
+        .teacher-social-logo {
+          width: 5%;
+          margin: 1% 1%;
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  
+  /* //////////////////// 5.TESTIMONIAL ///////////////////// */
+  #testimonial {
+    // .item {
+    //   position: relative;
+    //   .item-wrap {
+    //     padding-top: 5%;
+    //     .ava {
+    //       position: relative;
+    //       img {
+    //         position: absolute;
+    //         left: 50%;
+    //         transform: translate(-50%,-50%);
+    //         width: 30%;
+    //         z-index: 9;
+    //       }
+    //     }
+    //     .testimonial-content {
+    //       padding: 8% 8% 5%;
+    //       border: $light-gray 1px solid;
+    //       margin-bottom: 5%;
+    //       .rating {
+    //         input {
+    //           display: none;
+    //         }
+    //       }
+    //     }
+      // }
+    // }
+  }
+}
+
+
+

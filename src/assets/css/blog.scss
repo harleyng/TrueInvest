@@ -1,0 +1,461 @@
+@import 'base';
+
+// Content:
+// General
+// I. Home
+  // 1. Cover
+  // 2. Knowledge Sumarization
+  // 3. Stock Rating
+  // 4. Investment Opinion
+// II. Blog Category
+
+.tag {
+  background-color: $theme-color;
+  color: #fff;
+  display: inline-block;
+  h6, span {
+    padding: 5px 15px;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}
+@mixin background-cover-low-opacity {
+  content: '';
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+}
+@mixin content-cover-low-opacity($height) {
+  content: '';
+  height: $height;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 10px;
+  z-index: 1;
+}
+@mixin top-content {
+  position: absolute;
+  bottom: 0;
+  z-index: 9;
+}
+/////////////////////// I. HOME ///////////////////////
+.blog {
+  // categories tag
+  // link to detail page
+  .more {
+    display: inline-block;
+    h6 {
+      color: #fff;
+      &:hover {
+      color: #fff;
+        span {
+          border-bottom: 1px #fff solid;
+        }
+      }
+    }
+  }
+
+  /////////////////////// 1. COVER ///////////////////////
+  .cover-wrap {
+    background: url('../img//blog/cover.jpg') no-repeat;
+    background-size: 100% 110%;
+    position: relative;
+    color: #fff;
+    &::before {
+      content: '';
+      height: 100%;
+      width: 100%;
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+      position: absolute;
+    }
+    .cover-content {
+      padding: 60px 0;
+      padding-left: 15px;
+      .title {
+        font-weight: bolder;
+        margin-bottom: 20px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
+      .hottest-new {
+        margin: auto 0;
+        padding: 0 60px;
+        .brief-desc {
+          font-size: 1.25rem;
+          margin-top: 40px;
+          font-weight: bolder;
+        }
+      }
+      .hot-news-wrap {
+        border-left: $theme-color double 7px;
+        padding-left: 40px;
+        .hot-news-content {
+          background-color: rgba(179, 179, 179, 0.5);
+          border-top-left-radius: 5%;
+          border-bottom-left-radius: 5%;
+          padding: 25px 30px;
+          .hot-new:not(:last-child) {
+            margin-bottom: 30px;
+          }
+        }
+      }
+    }
+  }
+
+  /////////////////////// 2. KNOWLEDGE SUMMARIZATION ///////////////////////
+  .knowledge-summarization-wrap {
+    .knowledge-summarization-content {
+      #menu {
+        padding: 0 100px;
+        li {
+          button {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            background-color: #fff;
+            border: none;
+            &:focus {
+              box-shadow: none;
+            }
+          }
+          .active {
+            border-bottom: $theme-color 2px solid;
+            position: relative;
+            &::after {
+              content: '';
+              border: {
+                left: 25px solid transparent;
+                right: 25px solid transparent;
+                bottom: 25px solid $lightest-gray;
+              }
+              position: absolute;
+              left: 50%;
+              bottom: -40px;
+              transform: translateX(-50%);
+            }
+          }
+        }
+      }
+      .articles-wrap {
+        display: block;
+        margin-top: 35px;
+        background-color: $lightest-gray;
+        .articles-content {
+          padding: 40px 50px;
+          .article-wrap {
+            &:hover {
+              background-color: #fff;
+            }
+            .article-content {
+              padding: 25px;
+              .article-info {
+                padding-left: 40px;
+                .title, .author {
+                  font-weight: bolder;
+                  color: #000;
+                }
+                .author {
+                  color: $gray;
+                }
+              }
+              .article-brief-desc {
+                font-size: 1.15rem;
+              }
+              .more {
+                h6 {
+                  color: #000 !important;
+                  font-weight: bolder;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /////////////////////// 3. STOCK RATING ///////////////////////
+  .stock-rating {
+    .articles {
+      padding: 0 100px;
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      grid-template-rows: 150px 150px 150px;
+      grid-gap: 15px;
+      .item {
+        position: relative;
+        border-radius: 10px;
+        color: #fff;
+        font-weight: bolder;
+        transition: 0.5s ease;
+        // overflow: hidden;
+        &::before {
+          @include background-cover-low-opacity();
+        }
+        &::after {
+          @include content-cover-low-opacity(60%);
+        }
+        &:hover {
+          background-size: 105% 105% !important;
+          background-position: 25% 25% !important;
+          &::before {
+            content: '';
+            background: rgba(0, 0, 0, 0);
+          }
+        }
+        .content {
+          padding: 30px;
+          @include top-content();
+        }
+      }
+      .most-outstanding {
+        grid-row: 1 / 4;
+        grid-column: 1 / 3;
+        font-size: 1.75rem;
+      }
+    }
+  }
+
+  /////////////////////// 4. INVESTMENT OPINION ///////////////////////
+  .investment-opinion {
+    padding: 0 100px;
+    .item-wrap {
+      width: 33%;
+      margin-bottom: 50px;
+      padding: 0 20px;
+      float: left;
+      .item-content {
+        border-bottom: 1px solid black;
+        .blogImg-wrap {
+          position: relative;
+          overflow: hidden;
+          background: $theme-color;
+          img {
+            width: 100%;
+            height: 50%;
+            transition: transform .5s, opacity .5s;
+          }
+          h6 {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            text-align: center;
+            text-transform: capitalize;
+            color: #fff;
+            font-size: 20px;
+            font-weight: 300;
+            opacity: 0;
+            transition: transform .3s ease, opacity .7s;
+          }
+          .line {
+            position: absolute;
+            top: 62%;
+            right: 25%;
+            width: 0;
+            height: 1px;
+            background: white;
+            transition: width .75s ease;
+          }
+          &:hover {
+            img {
+            transform: scale(1.25);
+            opacity: .05;
+            }
+            h6 {
+              opacity: 1;
+              transform: translate(0, -20px);
+            }
+            .line {
+              width: 50%;
+            }
+          }
+        }
+      }
+      .date {
+        color: $gray !important;
+        margin: 10px 0;
+      }
+      .title {
+        height: 100px; 
+        font-size: 20px;
+        margin-bottom: 20px;
+        line-height: 32px;
+        text-transform: capitalize;
+        overflow: hidden;
+      }
+      .view {
+        margin-bottom: 5px;
+        .more {
+          font-size: 16px;
+          color: #000;
+        }
+        .view-number, .view-icon {
+          color: $theme-color;
+        }
+      }
+    }
+
+    @media only screen and (max-width: 1024px) {
+      .item-wrap {
+        width: 50%;
+      }
+    }
+    @media only screen and (max-width: 667px) {
+      .item-wrap {
+        width: 100%;
+      }
+    }
+  }
+}
+
+/////////////////////// II. BLOG CATEGORY ///////////////////////
+.blog-side-menu {
+  padding: 60px;
+  padding-left: 40px;
+  border-left: $lightest-gray 1px solid;
+  .blog-side-menu-section {
+    margin-bottom: 60px;
+  }
+  .blog-side-menu-title {
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    border-bottom: $lightest-gray 2px solid;
+    position: relative;
+    margin-bottom: 10px;
+    &::after {
+      content: '';
+      width: 20%;
+      height: 2px;
+      position: absolute;
+      background: $theme-color;
+      bottom: -2px;
+    }
+  }
+  .article, .tag-side-menu {
+    a {
+      &:hover {
+        color: $theme-color;
+      }
+    }
+  }
+  .search-bar {
+    position: relative;
+    input {
+      width: 100%;
+      border: $light-gray 1px solid;
+      padding: 7px;
+      padding-left: 20px;
+      border-radius: 20px;
+    }
+    button {
+      position: absolute;
+      font-size: 1.25rem;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: $gray;
+      transition: all 0.3s;   
+      transform-origin: 80% 30%;     
+      &:hover {
+        transform: rotate(90deg);
+      }
+    }
+  }
+  .newest-articles {
+    .article {
+      padding-bottom: 10px;
+      &:not(:first-child) {
+        padding: 10px 0;
+        border-top: $lightest-gray 1px solid;
+      }
+    }
+  }
+  .tag-side-menu {
+    display: inline-block;
+    .item-wrap {
+      float: left;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      border: 2px $lightest-gray solid;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+      &:hover {
+        border: $light-gray 2px solid;
+        background: $lightest-gray;
+      }
+      .item-content {
+        padding: 5px 10px;
+      }
+    }
+  }
+}
+.blog-category {
+  .category-name {
+    background: $theme-color;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    text-transform: capitalize;
+  }
+  .daily-hot-articles {
+    margin-top: 0.25%;
+    .article-container {
+      overflow: hidden;
+      height: 50vh;
+      width: 19.7%;
+      margin-right: 0.25%;
+      border-radius: 10px;
+      &:first-child {
+        margin-left: 0.25%;
+      }
+      .article-wrap {
+        border-radius: 10px;
+        color: #fff;
+        height: 100%;
+        display: block;
+        position: relative;
+        transition: all 0.3s ease;
+        &::before {
+          @include background-cover-low-opacity();
+        }
+        &::after {
+          @include content-cover-low-opacity(100%);
+        }
+        &:hover {
+          // background-size: 120% 120% !important;
+          // background-position: 25% 25% !important;
+          transform: scale(1.05);
+          &::before {
+            content: '';
+            background: rgba(0, 0, 0, 0);
+          }
+        }
+        .article-content {
+          @include top-content();
+          padding: 30px;
+          padding-top: 200px;
+          .tag {
+            font-size: 0.75rem;
+          }
+          .facebook-share {
+            .facebook-icon {
+              img {
+                width: 80%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .articles {
+    margin: 0 auto;
+  }
+}
+

@@ -1,0 +1,194 @@
+@import 'base';
+
+// Contents
+// General Settings
+// 1. Cover
+// 2. Studen Target
+// 3. Course Content
+// 4. Benefit
+// 5. Time 
+
+@font-face {
+  font-family: 'UTM AVO';
+  src: url(../font/UTM-AVO/UTM-Avo.ttf) format("truetype");
+}
+.leaf-button {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: $theme-color;
+    border: none;
+    padding: 10px 45px;
+    margin-top: 80px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    &:hover {
+      background-color: #fff;
+      color: $dark-green;
+      padding: 6px 41px;
+      border: $dark-green 4px solid;
+  }
+}
+%title-bolder {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: bolder;
+}
+
+.read-report, .dividend-investment {
+  /* //////////////////// 1.COVER ///////////////////// */
+  .cover {
+    .cover-img {
+      background: url('../img/course/read-report/cover.jpg') no-repeat;
+      background-size: cover;
+      border-bottom-right-radius: 150px;
+    }
+    .cover-content {
+      padding: 60px;
+      h1 {
+        color: $dark-green;
+        font-weight: bolder;
+        font-size: 3rem;
+      }
+      h4 {
+        padding-top: 20px;
+        padding-right: 30px;
+      }
+    }
+  }
+  /* //////////////////// 2.TARGET STUDENT ///////////////////// */
+  .target-student {
+    margin-top: 150px;
+    .content {
+      padding: 0 30px;
+      .first {
+        margin-bottom: 50px;
+        background: url('../img/course/read-report/targetstudentbg-1.png') no-repeat;
+        h1 {
+          color: $theme-color;
+        }
+      }
+      .second {
+        background: url('../img/course/read-report/targetstudentbg-2.png') no-repeat;
+        h1 {
+          color: $yellow;
+        }
+      }
+      .item {
+        background-size: 100% 100%;
+        padding: 30px 50px;
+        h1 {
+          @extend %title-bolder;
+          text-align: center;
+        }
+        p {
+          text-align: justify;
+          font-size: 20px;
+          font-weight: bold;
+        }
+      }
+    }
+    .img {
+      background: url('../img/course/read-report/targetstudent-img.png') no-repeat;
+      background-size: 80% 100%;
+      background-position: center;
+    }
+  }
+
+  /* //////////////////// 3.COURSE CONTENT ///////////////////// */
+  .course-content {
+    background-color: $light-green;
+    padding: 70px;
+    .content {
+      %highlight-content {
+        background-color: $theme-color;
+        color: #fff;
+      }
+      .item {
+        font-weight: bold;
+        padding: 40px;
+        width: 33%;
+        background-color: #fff;
+        .item-title {
+          @extend %title-bolder;
+          margin-bottom: 30px;
+          .item-number {
+            display: inline-block;
+            &::after {
+              content: '';
+              height: 4px;
+              width: 60%;
+              position: absolute;
+              background-color: $gray;
+            }
+          }
+        }
+        .big-dot {
+          height: 7px;
+          width: 7px;
+          border-radius: 50%;
+          display: inline-block;
+          background-color: $dark-green;
+          margin-right: 10px;
+        }
+        &:hover {
+          @extend %highlight-content;
+          .big-dot {
+            background-color: #fff;
+          }
+          .item-number {
+            &::after {
+              background-color: #fff;
+            }
+          }
+        }
+      }
+      .item:nth-child(2) {
+        @extend %highlight-content;
+        .big-dot, .item-number::after {
+          background-color: #fff;
+        }
+      }
+    }
+  }
+
+  /* //////////////////// 4. BENEFIT ///////////////////// */
+  .benefit {
+    .img {
+      background: url('../img/course/read-report/2a.png') no-repeat;
+      background-size: 100% 100%;
+    }
+    .content {
+      padding: 40px;
+      padding-right: 0;
+      .item {
+        &:nth-child(2) {
+          margin: 50px 0;
+        }
+        .item-img {
+          img {
+            width: 100%;
+          }
+        }
+        .item-content {
+          margin: auto 0;
+          font-weight: bold;
+          font-size: 16px;
+          text-align: justify;
+        }
+      }
+    }
+  }
+  
+  /* //////////////////// 5. PRICE ///////////////////// */
+  .price {
+    // margin-bottom: 0 !important;
+    background-color: $light-green;
+    padding: 50px 200px;
+    .section-title {
+      .price-number {
+        font-size: 30px;
+        margin-left: 20px;
+      }
+    }
+  }
+}

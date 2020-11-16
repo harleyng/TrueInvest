@@ -1,0 +1,226 @@
+@import 'base';
+
+// Contents
+// General Settings
+// 1. Cover
+// 2. The Best In Class
+// 3. Studen Target
+// 4. Course Content
+// 5. Benefit
+// 6. Time And Price
+
+@import "color";
+@font-face {
+  font-family: 'UTM AVO';
+  src: url(../font/UTM-AVO/UTM-Avo.ttf) format("truetype");
+}
+
+.leaf-button {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: $theme-color;
+    border: none;
+    padding: 10px 45px;
+    margin-top: 80px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    &:hover {
+      background-color: #fff;
+      color: $dark-green;
+      padding: 6px 41px;
+      border: $dark-green 4px solid;
+  }
+}
+.skew {
+  background-color: $theme-color;
+  transform: skew(20deg);
+  text-align: center;
+}
+.inv-skew {
+  transform: skew(-20deg);
+}
+.protrader, .investor {
+  /* //////////////////// 1.COVER ///////////////////// */
+  .cover {
+    background: url('../img/course/protrader/protrader-cover.jpg') no-repeat;
+    background-size: auto;
+    background-position: 100% 70%;
+    background-color: $dark-green;
+    position: relative;
+      &::before {
+        content: '';
+        background: linear-gradient(to left, rgba(255,255,255,0), rgba(32, 68, 32, 1));
+        position: absolute;
+        height: 100%;
+        width: 50vw;
+        top: 0;
+        left: 44%;
+      }
+    .cover-content {
+      padding: 100px 80px 80px;
+      color: #fff;
+      h1 {
+        font-size: 6rem;
+        font-family: 'UTM AVO';
+      }
+      .sologan-wrap {
+        display: inline-block;
+        margin-top: 30px;
+        padding: 15px 35px;
+        .sologan-content {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+
+  /* ///////////// 2. THE BEST IN CLASS ////////////// */
+  .the-best-in-class {
+    .the-best-in-class-img {
+      background: url('../img/course/protrader/the-best-in-class.jpg') no-repeat;
+      background-size: cover;
+    }
+    .the-best-in-class-content {
+      .item {
+        margin: 20px 15px;
+        font-size: 16px;
+        .content {
+          margin: auto 0;
+          .highlight {
+            font-weight: bold;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+
+  /* ///////////// 3. STUDENT TARGET ////////////// */
+  .khoa-hoc-danh-cho-ai {
+    background: $light-green;
+    padding: 100px 0;
+    .item {
+      padding: 0;
+      background: #fff;
+      font-size: 16px;
+      box-shadow:   0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+        0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 21.8px 33.4px rgba(0, 0, 0, 0.086),
+        0 10px 80px rgba(0, 0, 0, 0.12);
+      img {
+        width: 100%;
+        min-height: 120px;
+        max-height: 170px;
+      }
+      .item-content {
+        padding: 50px;
+      }
+    }
+  }
+
+  /* ///////////// 4. COURSE CONTENT ////////////// */
+  .course-content {
+    .item {
+      background: url('../img/course/protrader/border.png') no-repeat;
+      background-size: 100% 100%;
+      padding: 0 20px 20px;
+      width: 30%;
+      color: $dark-green;
+      .item-title {
+        text-align: center;
+        font-size: 30px;
+        font-weight: bolder !important;
+        .big-number {
+          font-size: 50px;
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+      }
+      .item-content {
+        margin-top: 20px;
+        font-weight: bolder;
+        .big-dot {
+          height: 7px;
+          width: 7px;
+          border-radius: 50%;
+          display: inline-block;
+          background-color: $dark-green;
+          margin-right: 10px;
+        }
+        table {
+          font-weight: 400 !important;
+          td {
+            padding: 0 5px;
+          }
+          td:first-child {
+            padding-left: 30px;
+          }
+        }
+      }
+    }
+  }
+
+  /* ///////////// 5. BENEFIT ////////////// */
+  .benefit {
+    padding: 0 100px;
+    .benefit-img {
+      background: url('../img/course/protrader/teacher.png') no-repeat;
+      background-size: contain;
+    }
+    .content {
+      .item {
+        &:nth-child(2) {
+          margin-top: 50px;
+        }
+        .number {
+          font-size: 60px;
+          color: $light-gray;
+          font-weight: bold;
+        }
+        .title {
+          color: $theme-color;
+          font-weight: bold;
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          margin: 20px 0 10px;
+        }
+      }
+    }
+  }
+
+  /* ///////////// 6. TIME AND PRICE ////////////// */
+  .time-and-price {
+    font-weight: bold;
+    margin-left: 100px;
+    margin-right: 100px;
+    .time, .price, .signup {
+      min-height: 120px;
+    }
+    .time, .price {
+      padding: 15px 40px;
+      h2 {
+        color: #fff;
+      }
+      h3 {
+        color: $dark-green;
+        font-weight: bolder;
+      }
+    }
+    .signup {
+      background: $yellow;
+      color: $dark-green;
+      font-size: 30px;
+      border: none;
+      width: 100%;
+      height: 100%;
+      font-weight: bold;
+      &:hover {
+        background: $theme-color;
+        color: #fff;
+      }
+    }
+  }
+}
+
+
