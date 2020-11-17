@@ -194,7 +194,6 @@
         color: #fff;
         font-weight: bolder;
         transition: 0.5s ease;
-        // overflow: hidden;
         &::before {
           @include background-cover-low-opacity();
         }
@@ -316,9 +315,12 @@
 
 /////////////////////// II. BLOG CATEGORY ///////////////////////
 .blog-side-menu {
-  padding: 60px;
-  padding-left: 40px;
+  height: 100%;
+  padding: 60px 60px 0 40px;
   border-left: $lightest-gray 1px solid;
+  .sticky-part {
+    z-index: 1;
+  }
   .blog-side-menu-section {
     margin-bottom: 60px;
   }
@@ -406,6 +408,7 @@
   .daily-hot-articles {
     margin-top: 0.25%;
     .article-container {
+      display: block;
       overflow: hidden;
       height: 50vh;
       width: 19.7%;
@@ -418,7 +421,6 @@
         border-radius: 10px;
         color: #fff;
         height: 100%;
-        display: block;
         position: relative;
         transition: all 0.3s ease;
         &::before {
@@ -454,8 +456,40 @@
       }
     }
   }
-  .articles {
+  .articles-container {
     margin: 0 auto;
+    .articles {
+      padding: 60px 40px 0 60px;
+      height: 100%;
+      .article {
+        float: right;
+        width: 47%;
+        &:nth-child(odd) {
+        clear: both;
+        margin-left: 1.5%;
+        }
+        &:nth-child(even) {
+          margin-right: 1.5%;
+        }
+        .article-img {
+          width: 100%;
+          border-radius: 5px;
+        }
+        .title {
+          margin: 20px 0 10px;
+        }
+        .article-info {
+          color: $light-gray;
+          text-transform: uppercase;
+          .flame-icon {
+            margin: 0 5px;
+          }
+        }
+        // .brief {
+        //   // padding-top: 10px;
+        // }
+      }
+    }
   }
 }
 

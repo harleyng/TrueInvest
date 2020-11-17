@@ -3,8 +3,8 @@ import facebookGray from '../../../assets/img/blog/facebook-gray.png'
 
 const DailyHotArticle = props => {
   return (
-    <div className="article-container">
-      <a className="article-wrap"
+    <a className="article-container" href="">
+      <div className="article-wrap"
         style={{
           backgroundImage: `url(${props.bg})`,
           backgroundSize: 'cover',
@@ -28,8 +28,8 @@ const DailyHotArticle = props => {
             </div>
           </div>
         </div>
-      </a>
-    </div>
+      </div>
+    </a>
   )
 }
 

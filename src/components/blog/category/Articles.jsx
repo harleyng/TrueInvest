@@ -20,7 +20,7 @@ const articles = [
   {
     id : 1,
     href : '',
-    img : 'https://loremflickr.com/640/360',
+    img : 'https://loremflickr.com/360/240',
     title : 'Dịch Covid-19 và hiệu ứng Domino sụp đổ của các ngành công nghiệp',
     publicDate : 'tháng tám 12, 2020',
     view : '340',
@@ -29,7 +29,7 @@ const articles = [
   {
     id : 2,
     href : '',
-    img : 'https://loremflickr.com/640/360',
+    img : 'https://loremflickr.com/360/240',
     title : 'Dịch Covid-19 và hiệu ứng Domino sụp đổ của các ngành công nghiệp',
     publicDate : 'tháng tám 12, 2020',
     view : '340',
@@ -38,7 +38,7 @@ const articles = [
   {
     id : 3,
     href : '',
-    img : 'https://loremflickr.com/640/360',
+    img : 'https://loremflickr.com/360/240',
     title : 'Dịch Covid-19 và hiệu ứng Domino sụp đổ của các ngành công nghiệp',
     publicDate : 'tháng tám 12, 2020',
     view : '340',
@@ -47,7 +47,7 @@ const articles = [
   {
     id : 4,
     href : '',
-    img : 'https://loremflickr.com/640/360',
+    img : 'https://loremflickr.com/360/240',
     title : 'Dịch Covid-19 và hiệu ứng Domino sụp đổ của các ngành công nghiệp',
     publicDate : 'tháng tám 12, 2020',
     view : '340',
@@ -56,7 +56,7 @@ const articles = [
   {
     id : 5,
     href : '',
-    img : 'https://loremflickr.com/640/360',
+    img : 'https://loremflickr.com/360/240',
     title : 'Dịch Covid-19 và hiệu ứng Domino sụp đổ của các ngành công nghiệp',
     publicDate : 'tháng tám 12, 2020',
     view : '340',
@@ -65,7 +65,7 @@ const articles = [
   {
     id : 5,
     href : '',
-    img : 'https://loremflickr.com/640/360',
+    img : 'https://loremflickr.com/360/240',
     title : 'Dịch Covid-19 và hiệu ứng Domino sụp đổ của các ngành công nghiệp',
     publicDate : 'tháng tám 12, 2020',
     view : '340',
@@ -74,7 +74,7 @@ const articles = [
   {
     id : 6,
     href : '',
-    img : 'https://loremflickr.com/640/360',
+    img : 'https://loremflickr.com/360/240',
     title : 'Dịch Covid-19 và hiệu ứng Domino sụp đổ của các ngành công nghiệp',
     publicDate : 'tháng tám 12, 2020',
     view : '340',
@@ -83,7 +83,7 @@ const articles = [
   {
     id : 7,
     href : '',
-    img : 'https://loremflickr.com/640/360',
+    img : 'https://loremflickr.com/360/240',
     title : 'Dịch Covid-19 và hiệu ứng Domino sụp đổ của các ngành công nghiệp',
     publicDate : 'tháng tám 12, 2020',
     view : '340',
@@ -92,7 +92,7 @@ const articles = [
   {
     id : 8,
     href : '',
-    img : 'https://loremflickr.com/640/360',
+    img : 'https://loremflickr.com/360/240',
     title : 'Dịch Covid-19 và hiệu ứng Domino sụp đổ của các ngành công nghiệp',
     publicDate : 'tháng tám 12, 2020',
     view : '340',
@@ -101,7 +101,7 @@ const articles = [
   {
     id : 9,
     href : '',
-    img : 'https://loremflickr.com/640/360',
+    img : 'https://loremflickr.com/360/240',
     title : 'Dịch Covid-19 và hiệu ứng Domino sụp đổ của các ngành công nghiệp',
     publicDate : 'tháng tám 12, 2020',
     view : '340',
@@ -110,7 +110,7 @@ const articles = [
   {
     id : 10,
     href : '',
-    img : 'https://loremflickr.com/640/360',
+    img : 'https://loremflickr.com/360/240',
     title : 'Dịch Covid-19 và hiệu ứng Domino sụp đổ của các ngành công nghiệp',
     publicDate : 'tháng tám 12, 2020',
     view : '340',
@@ -119,7 +119,7 @@ const articles = [
   {
     id : 11,
     href : '',
-    img : 'https://loremflickr.com/640/360',
+    img : 'https://loremflickr.com/360/240',
     title : 'Dịch Covid-19 và hiệu ứng Domino sụp đổ của các ngành công nghiệp',
     publicDate : 'tháng tám 12, 2020',
     view : '340',
@@ -128,7 +128,7 @@ const articles = [
   {
     id : 12,
     href : '',
-    img : 'https://loremflickr.com/640/360',
+    img : 'https://loremflickr.com/360/240',
     title : 'Dịch Covid-19 và hiệu ứng Domino sụp đổ của các ngành công nghiệp',
     publicDate : 'tháng tám 12, 2020',
     view : '340',
@@ -137,7 +137,7 @@ const articles = [
   {
     id : 13,
     href : '',
-    img : 'https://loremflickr.com/640/360',
+    img : 'https://loremflickr.com/360/240',
     title : 'Dịch Covid-19 và hiệu ứng Domino sụp đổ của các ngành công nghiệp',
     publicDate : 'tháng tám 12, 2020',
     view : '340',
@@ -155,14 +155,14 @@ const Articles = () => {
   };
 
   // Logic for displaying current page
-  const articlePerPage = 6;
+  const articlePerPage = 10;
   const lastArticle = page * articlePerPage;
   const firstArticle = lastArticle - articlePerPage;
   const currentArticles = articles.slice(firstArticle, lastArticle);
 
   return (
     <div>
-      <div className="aritcles">
+      <div className="articles">
         {currentArticles.map((article, index) => (
           <React.Fragment key={article._id}>
             <Article
@@ -177,13 +177,13 @@ const Articles = () => {
           </React.Fragment>
         ))}
       </div>
-      <div className={classes.root} id="pagination">
+      <div className={classes.root} id="pagination" style={{clear:"both"}}>
         <Pagination
           count={4} 
           page={page} 
           variant="outlined" 
           onChange={handleChange}
-          renderItem={(item)=> <PaginationItem {...item}/>}
+          renderItem={(item)=> <PaginationItem {...item} className={classes.root}/> }
         />
       </div>
     </div>

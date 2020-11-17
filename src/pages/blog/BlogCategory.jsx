@@ -1,13 +1,13 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import SearchBar from '../../components/blog/SearchBar'
 import NewestArticles from '../../components/blog/NewestArticles'
 import HighlightArticles from '../../components/blog/HighlightArticles'
 import Tag from '../../components/blog/Tag'
 import DaiLyHotArticle from '../../components/blog/item/DailyHotArticle'
 import dailyBg from '../../assets/img/blog/category/daily-bg.jpg'
-// import Pagination from '@material-ui/lab/Pagination'
-// import { withStyles } from '@material-ui/core/styles';
 import Articles from '../../components/blog/category/Articles'
+
+import $ from 'jquery'
 
 const styles = {
   root: {
@@ -59,7 +59,15 @@ const BlogCategory = props => {
       share : 3
     },
   ]
-
+  // const [articlesHeight, setarticlesHeight] = useState(0)
+  // articlesHeight = $('.blog-side-menu').height()
+  useEffect(() => {
+    setTimeout(() => {
+      let top = $('.navbar2').height() + 60;
+      $('.blog-side-menu').height($('.articles-container').height())
+      $('.sticky-part').css('top', top);
+    }, 2000);
+  }, [])
   return (
     <div className="blog-category">
       <div className="category-name">
@@ -79,28 +87,30 @@ const BlogCategory = props => {
           </React.Fragment>
         ))}
       </div>
-      <div className="row">
-        <div className="col-8 articles">
+      <div className="row mb-5 align-items-start" style={{position:"relative"}}>
+        <div className="col-8 articles-container p-0">
           <Articles/>
         </div>
         <div className="col-4 blog-side-menu">
-          <SearchBar/>
-          <div className="facebook-fanpage blog-side-menu-section">
-            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ftrueinvest.daututhat&tabs&width=390&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId=771502006727396" 
-                    title="True Invest - Đầu tư thật"
-                    width="400px"
-                    data-width="400px" 
-                    // height="250" 
-                    style={{border: "none", overflow: "hidden"}} 
-                    scrolling="no" 
-                    frameborder="0" 
-                    allowTransparency="true" 
-                    allow="encrypted-media">
-            </iframe>
-          </div>
-          <NewestArticles/>
-          <HighlightArticles/>
-          <Tag/>
+          <nav className="sticky-top sticky-part">
+            <SearchBar/>
+            <div className="facebook-fanpage blog-side-menu-section">
+              <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ftrueinvest.daututhat&tabs&width=390&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId=771502006727396" 
+                      title="True Invest - Đầu tư thật"
+                      width="400px"
+                      data-width="400px" 
+                      // height="250" 
+                      style={{border: "none", overflow: "hidden"}} 
+                      scrolling="no" 
+                      frameborder="0" 
+                      allowTransparency="true" 
+                      allow="encrypted-media">
+              </iframe>
+            </div>
+            <NewestArticles/>
+            <HighlightArticles/>
+            <Tag/>
+          </nav>
         </div>
       </div>
     </div>
