@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import SearchBar from '../../components/blog/SearchBar'
 import NewestArticles from '../../components/blog/NewestArticles'
 import HighlightArticles from '../../components/blog/HighlightArticles'
@@ -59,12 +59,11 @@ const BlogCategory = props => {
       share : 3
     },
   ]
-  // const [articlesHeight, setarticlesHeight] = useState(0)
-  // articlesHeight = $('.blog-side-menu').height()
+
   useEffect(() => {
     setTimeout(() => {
       let top = $('.navbar2').height() + 60;
-      $('.blog-side-menu').height($('.articles-container').height())
+      $('.blog-category .blog-side-menu').height($('.articles-container').height())
       $('.sticky-part').css('top', top);
     }, 2000);
   }, [])

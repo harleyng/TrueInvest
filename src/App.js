@@ -44,12 +44,12 @@ function App() {
               </MainLayout>
             </Route>
 
-            <Route exact path='/blog/:path?'>
+            <Route exact path='/blog/:path?/:path?'>
               <BlogLayout>
                 <Switch>
                   <Route exact path="/blog" component={Blog}/>
                   <Route exact path="/blog/:category" component={BlogCategory}/>
-                  <Route exact path="/blog/:category/:id" component={BlogDetail}/>
+                  <Route exact path="/blog/:category/:title" component={BlogDetail}/>
                 </Switch>
               </BlogLayout>
             </Route>

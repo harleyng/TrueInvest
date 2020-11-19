@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) =>({
 const articles = [
   {
     id : 1,
-    href : '',
+    href : 'detail',
     img : 'https://loremflickr.com/360/240',
     title : 'Dịch Covid-19 và hiệu ứng Domino sụp đổ của các ngành công nghiệp',
     publicDate : 'tháng tám 12, 2020',
@@ -28,7 +28,7 @@ const articles = [
   },
   {
     id : 2,
-    href : '',
+    href : 'detail',
     img : 'https://loremflickr.com/360/240',
     title : 'Dịch Covid-19 và hiệu ứng Domino sụp đổ của các ngành công nghiệp',
     publicDate : 'tháng tám 12, 2020',
@@ -37,7 +37,7 @@ const articles = [
   },
   {
     id : 3,
-    href : '',
+    href : 'detail',
     img : 'https://loremflickr.com/360/240',
     title : 'Dịch Covid-19 và hiệu ứng Domino sụp đổ của các ngành công nghiệp',
     publicDate : 'tháng tám 12, 2020',
@@ -46,7 +46,7 @@ const articles = [
   },
   {
     id : 4,
-    href : '',
+    href : 'detail',
     img : 'https://loremflickr.com/360/240',
     title : 'Dịch Covid-19 và hiệu ứng Domino sụp đổ của các ngành công nghiệp',
     publicDate : 'tháng tám 12, 2020',
@@ -55,7 +55,7 @@ const articles = [
   },
   {
     id : 5,
-    href : '',
+    href : 'detail',
     img : 'https://loremflickr.com/360/240',
     title : 'Dịch Covid-19 và hiệu ứng Domino sụp đổ của các ngành công nghiệp',
     publicDate : 'tháng tám 12, 2020',
@@ -64,7 +64,7 @@ const articles = [
   },
   {
     id : 5,
-    href : '',
+    href : 'detail',
     img : 'https://loremflickr.com/360/240',
     title : 'Dịch Covid-19 và hiệu ứng Domino sụp đổ của các ngành công nghiệp',
     publicDate : 'tháng tám 12, 2020',
@@ -73,7 +73,7 @@ const articles = [
   },
   {
     id : 6,
-    href : '',
+    href : 'detail',
     img : 'https://loremflickr.com/360/240',
     title : 'Dịch Covid-19 và hiệu ứng Domino sụp đổ của các ngành công nghiệp',
     publicDate : 'tháng tám 12, 2020',
@@ -82,7 +82,7 @@ const articles = [
   },
   {
     id : 7,
-    href : '',
+    href : 'detail',
     img : 'https://loremflickr.com/360/240',
     title : 'Dịch Covid-19 và hiệu ứng Domino sụp đổ của các ngành công nghiệp',
     publicDate : 'tháng tám 12, 2020',
@@ -91,7 +91,7 @@ const articles = [
   },
   {
     id : 8,
-    href : '',
+    href : 'detail',
     img : 'https://loremflickr.com/360/240',
     title : 'Dịch Covid-19 và hiệu ứng Domino sụp đổ của các ngành công nghiệp',
     publicDate : 'tháng tám 12, 2020',
@@ -100,7 +100,7 @@ const articles = [
   },
   {
     id : 9,
-    href : '',
+    href : 'detail',
     img : 'https://loremflickr.com/360/240',
     title : 'Dịch Covid-19 và hiệu ứng Domino sụp đổ của các ngành công nghiệp',
     publicDate : 'tháng tám 12, 2020',
@@ -109,7 +109,7 @@ const articles = [
   },
   {
     id : 10,
-    href : '',
+    href : 'detail',
     img : 'https://loremflickr.com/360/240',
     title : 'Dịch Covid-19 và hiệu ứng Domino sụp đổ của các ngành công nghiệp',
     publicDate : 'tháng tám 12, 2020',
@@ -118,7 +118,7 @@ const articles = [
   },
   {
     id : 11,
-    href : '',
+    href : 'detail',
     img : 'https://loremflickr.com/360/240',
     title : 'Dịch Covid-19 và hiệu ứng Domino sụp đổ của các ngành công nghiệp',
     publicDate : 'tháng tám 12, 2020',
@@ -127,7 +127,7 @@ const articles = [
   },
   {
     id : 12,
-    href : '',
+    href : 'detail',
     img : 'https://loremflickr.com/360/240',
     title : 'Dịch Covid-19 và hiệu ứng Domino sụp đổ của các ngành công nghiệp',
     publicDate : 'tháng tám 12, 2020',
@@ -136,7 +136,7 @@ const articles = [
   },
   {
     id : 13,
-    href : '',
+    href : 'detail',
     img : 'https://loremflickr.com/360/240',
     title : 'Dịch Covid-19 và hiệu ứng Domino sụp đổ của các ngành công nghiệp',
     publicDate : 'tháng tám 12, 2020',
@@ -145,7 +145,7 @@ const articles = [
   },
 ]
 
-const Articles = () => {
+const Articles = props => {
   const classes = useStyles();
 
   // Handle page change
