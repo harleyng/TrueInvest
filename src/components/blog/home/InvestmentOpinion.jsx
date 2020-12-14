@@ -6,9 +6,9 @@ const InvestmentOpinion = () => {
   return (
     <div className="investment-opinion section">
       <div className="section-title"><h1>quan điểm đầu tư</h1></div>
-      <div className="">
+      <div className="item-list container">
         <List/>
-      </div>
+      </div> 
     </div>
   )
 }

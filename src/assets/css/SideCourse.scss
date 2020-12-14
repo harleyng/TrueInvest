@@ -43,6 +43,7 @@
       border-bottom-right-radius: 150px;
     }
     .cover-content {
+      position: relative;
       padding: 60px;
       h1 {
         color: $dark-green;
@@ -52,6 +53,40 @@
       h4 {
         padding-top: 20px;
         padding-right: 30px;
+      }
+    }
+    @media screen and (max-width: 1200px) and (min-width: 992) {
+      .cover-content {
+        h1 {
+          font-size: 2rem;
+        }
+      }
+    }
+    @media screen and (min-width: 1500px) {
+      max-width: 1140px;
+      margin: 0 auto;
+    }
+    @media screen and (max-width: 992px) {
+      .cover-content {
+        background: url('../img/course/read-report/cover.jpg') no-repeat;
+        background-size: 100% 100%;
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          // z-index: 1;
+          background-color: rgba(0, 0, 0, 0.7);
+        }
+        h1 {
+          color: $lightest-gray;
+        }
+      }
+      .cover-content > * {
+        // z-index: 100;
+        position: relative;
       }
     }
   }
@@ -91,6 +126,16 @@
       background: url('../img/course/read-report/targetstudent-img.png') no-repeat;
       background-size: 80% 100%;
       background-position: center;
+      width: 100%;
+      height: 90%;
+    }
+    @media screen and (max-width: 768px) {
+      .img {
+        height: 350px;
+        width: 70%;
+        margin: 0 auto;
+        margin-top: 50px;
+      }
     }
   }
 
@@ -149,6 +194,30 @@
         }
       }
     }
+
+    @media screen and (max-width: 992px) {
+      .content {
+        display: block !important;
+        .item {
+          width: 100%;
+          clear: both; 
+        }
+      }
+    }
+    @media screen and (max-width: 768px) {
+      .content {
+        .item {
+          .item-title {
+            .item-number {
+              &::after {
+                content: '';
+                width: 80%;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
   /* //////////////////// 4. BENEFIT ///////////////////// */
@@ -177,17 +246,49 @@
         }
       }
     }
+    @media screen and (max-width: 992px) {
+      .img {
+        margin: 0 auto;
+        height: 400px; 
+      }
+      .content {
+        padding: 40px;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      .img {
+        height: 300px; 
+      }
+      .content {
+        padding: 20px;
+      }
+    }
   }
   
   /* //////////////////// 5. PRICE ///////////////////// */
   .price {
     // margin-bottom: 0 !important;
     background-color: $light-green;
-    padding: 50px 200px;
+    padding: 50px 0;
     .section-title {
       .price-number {
         font-size: 30px;
         margin-left: 20px;
+      }
+    }
+    @media screen and (max-width: 992px) {
+      .register-button {
+        margin-top: 30px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .dividend-investment {
+    .cover {
+      .cover-content {
+        padding: 80px 60px;
       }
     }
   }

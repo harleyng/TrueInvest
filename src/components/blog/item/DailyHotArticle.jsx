@@ -15,16 +15,14 @@ const DailyHotArticle = props => {
         <div className="article-content">
           <h5 className="mb-3">{props.title}</h5>
           <div className="row">
-            <div className="col-7"><div className="tag"><span>{props.tag}</span></div></div>
-            <div className="col-5 facebook-share">
-              <div className="row">
-                <div className="col-2 facebook-icon p-0 mr-1">
+            <div className="col-4 col-sm-3 col-lg-12"><div className="tag"><span>{props.tag}</span></div></div>
+            <div className="facebook-share col-6 col-lg-12 row m-0">
+                <div className="col-1 facebook-icon p-0 mr-1">
                   <img src={facebookGray} alt="Facebook Icon"/> 
                 </div>
                 <div className="">
                   {props.share} SHARES
                 </div>
-              </div>
             </div>
           </div>
         </div>

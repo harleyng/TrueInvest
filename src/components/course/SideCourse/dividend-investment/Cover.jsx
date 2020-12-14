@@ -3,11 +3,10 @@ import React from 'react'
 const Cover = () => {
   return (
     <div className="cover">
-      <div className="header-blank"></div>
       <div className="row">
-        <div className="col-6 cover-img">
+        <div className="col-md-12 col-lg-5 col-xl-6 cover-img">
         </div>
-        <div className="col-6 cover-content">
+        <div className="col-md-12 col-lg-7 col-xl-6 cover-content">
           <h1 className="uppercase">
             Đầu tư cổ tức
           </h1>

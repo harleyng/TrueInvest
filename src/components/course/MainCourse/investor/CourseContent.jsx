@@ -5,7 +5,7 @@ const CourseContent = () => {
     <div className="course-content section">
       <h1 className="section-title uppercase">NỘI DUNG KHOÁ HỌC</h1>
       <div className="container">
-        <div className="d-flex justify-content-between">
+        <div className="d-flex items-wrap justify-content-between">
           <div className="item">
             <div className="item-title">
               Buổi <span className="big-number"><span className="tab"></span>1</span>

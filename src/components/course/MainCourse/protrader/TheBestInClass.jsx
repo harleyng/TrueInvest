@@ -7,8 +7,8 @@ const TheBestInClass = () => {
       <h1 className="section-title uppercase">THE BEST IN CLASS</h1>
       <div className="container">
         <div className="row">
-          <div className="col-7 the-best-in-class-img"></div>
-          <div className="col-5 the-best-in-class-content">
+          <div className="col-12 col-lg-7 the-best-in-class-img"></div>
+          <div className="col-12 col-lg-5 the-best-in-class-content">
             <TheBestInClassList/>
           </div>
         </div>

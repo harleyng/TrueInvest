@@ -44,21 +44,21 @@
   /* //////////////////// 1.COVER ///////////////////// */
   .cover {
     background: url('../img/course/protrader/protrader-cover.jpg') no-repeat;
-    background-size: auto;
+    background-size: 50% 100%;
     background-position: 100% 70%;
     background-color: $dark-green;
     position: relative;
       &::before {
         content: '';
-        background: linear-gradient(to left, rgba(255,255,255,0), rgba(32, 68, 32, 1));
+        background: linear-gradient(to left, rgba(255,255,255,0), rgb(31, 63, 31));
         position: absolute;
         height: 100%;
         width: 50vw;
         top: 0;
-        left: 44%;
+        left: 50%;
       }
     .cover-content {
-      padding: 100px 80px 80px;
+      padding: 100px 0 80px;
       color: #fff;
       h1 {
         font-size: 6rem;
@@ -71,6 +71,36 @@
         .sologan-content {
           font-size: 2rem;
         }
+      }
+    } 
+    @media screen and (max-width: 1200px) {
+      .cover-content {
+        h1 {
+          font-size: 4.5rem;
+        }
+      }
+      .sologan-content {
+        font-size: 1.7rem !important;
+      }
+    }
+    @media screen and (max-width: 992px) {
+      .cover-content {
+        h1 {
+          font-size: 4rem;
+        }
+      }
+      .sologan-content {
+        font-size: 1.5rem !important;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      .cover-content {
+        h1 {
+          font-size: 3.5rem;
+        }
+      }
+      .sologan-content {
+        font-size: 1.2rem !important;
       }
     }
   }
@@ -94,6 +124,12 @@
         }
       }
     }
+    @media screen and (max-width: 992px) {
+      .the-best-in-class-img {
+        height: 400px;
+        margin-bottom: 40px;
+      }
+    }
   }
 
   /* ///////////// 3. STUDENT TARGET ////////////// */
@@ -113,10 +149,26 @@
       img {
         width: 100%;
         min-height: 120px;
-        max-height: 170px;
       }
       .item-content {
         padding: 50px;
+      }
+    }
+    @media screen and (min-width: 992px) {
+      .item {
+        img {
+          max-height: 170px;
+        }
+      }
+    }
+    @media screen and (max-width: 992px) {
+      .item {
+        &:not(:first-child) {
+          margin-top: 40px;
+        }
+        img {
+          height: 100%;
+        }
       }
     }
   }
@@ -127,7 +179,7 @@
       background: url('../img/course/protrader/border.png') no-repeat;
       background-size: 100% 100%;
       padding: 0 20px 20px;
-      width: 30%;
+      width: 31%;
       color: $dark-green;
       .item-title {
         text-align: center;
@@ -160,14 +212,25 @@
         }
       }
     }
+    @media screen and (max-width: 992px) {
+      .items-wrap {
+        display: block !important;
+      }
+      .item {
+        width: 100%;
+        &:not(:first-child) {
+          margin-top: 60px;
+        }
+      }
+    }
   }
 
   /* ///////////// 5. BENEFIT ////////////// */
   .benefit {
-    padding: 0 100px;
     .benefit-img {
       background: url('../img/course/protrader/teacher.png') no-repeat;
       background-size: contain;
+      background-position: 100% 100%;
     }
     .content {
       .item {
@@ -187,6 +250,17 @@
         }
       }
     }
+    @media screen and (max-width: 992px) {
+      .content {
+        .item {
+          margin: 0 !important;
+        }
+      }
+      .benefit-img {
+        height: 400px !important;
+        background-position: 50% 100%;
+      }
+    }
   }
 
   /* ///////////// 6. TIME AND PRICE ////////////// */
@@ -195,7 +269,7 @@
     margin-left: 100px;
     margin-right: 100px;
     .time, .price, .signup {
-      min-height: 120px;
+      // min-height: 120px;
     }
     .time, .price {
       padding: 15px 40px;
@@ -209,6 +283,7 @@
     }
     .signup {
       background: $yellow;
+      padding: 15px 0;
       color: $dark-green;
       font-size: 30px;
       border: none;
@@ -218,6 +293,34 @@
       &:hover {
         background: $theme-color;
         color: #fff;
+      }
+    }
+    @media screen and (max-width: 1330px) {
+      .time, .price {
+        h2 {
+          font-size: 31px;
+        }
+        h3 {
+          font-size: 23px;
+        }
+      }
+    }
+    @media screen and (max-width: 1200px) {
+      .time, .price {
+        margin-bottom: 40px;
+      }
+      .signup-wrap {
+        margin: 0 auto;
+      }
+    }
+    @media screen and (max-width: 850px) and (min-width:768px) {
+      .time, .price {
+        h2 {
+          font-size: 25px;
+        }
+        h3 {
+          font-size: 18px;
+        }
       }
     }
   }

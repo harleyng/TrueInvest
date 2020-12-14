@@ -72,7 +72,7 @@ const BlogCategory = props => {
       <div className="category-name">
         <h1>{category}</h1>
       </div>
-      <div className="daily-hot-articles d-flex">
+      <div className="daily-hot-articles">
         {DaiLyHotAritcles.map(item=>(
           <React.Fragment key = {item._id}>
             <DaiLyHotArticle
@@ -86,30 +86,34 @@ const BlogCategory = props => {
           </React.Fragment>
         ))}
       </div>
-      <div className="row mb-5 align-items-start" style={{position:"relative"}}>
-        <div className="col-8 articles-container p-0">
-          <Articles/>
-        </div>
-        <div className="col-4 blog-side-menu">
-          <nav className="sticky-top sticky-part">
-            <SearchBar/>
-            <div className="facebook-fanpage blog-side-menu-section">
-              <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ftrueinvest.daututhat&tabs&width=390&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId=771502006727396" 
-                      title="True Invest - Đầu tư thật"
-                      width="400px"
-                      data-width="400px" 
-                      // height="250" 
-                      style={{border: "none", overflow: "hidden"}} 
-                      scrolling="no" 
-                      frameborder="0" 
-                      allowTransparency="true" 
-                      allow="encrypted-media">
-              </iframe>
+      <div className="container">
+        <div className="row mb-5 align-items-start" style={{position:"relative"}}>
+          <div className="col-12 col-lg-8 articles-container p-0">
+            <div className="container">
+              <Articles/>
             </div>
-            <NewestArticles/>
-            <HighlightArticles/>
-            <Tag/>
-          </nav>
+          </div>
+          <div className="col-4 blog-side-menu">
+            <nav className="sticky-top sticky-part">
+              <SearchBar/>
+              <div className="facebook-fanpage blog-side-menu-section">
+                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ftrueinvest.daututhat&tabs&width=390&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId=771502006727396" 
+                        title="True Invest - Đầu tư thật"
+                        width="400px"
+                        data-width="400px" 
+                        // height="250" 
+                        style={{border: "none", overflow: "hidden"}} 
+                        scrolling="no" 
+                        frameborder="0" 
+                        allowTransparency="true" 
+                        allow="encrypted-media">
+                </iframe>
+              </div>
+              <NewestArticles/>
+              <HighlightArticles/>
+              <Tag/>
+            </nav>
+          </div>
         </div>
       </div>
     </div>

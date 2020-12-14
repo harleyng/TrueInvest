@@ -7,11 +7,10 @@ import documentStorageImg from '../../assets/img/landingpage/document-storage-im
 const About = () => {
   return (
     <section id="about" className="section">
-      {/* <div className="header-blank"></div> */}
       <div className="brief-description">
         <div className="container my-5">
           <div className="row justify-content-between">
-            <div className="col-6 brief-description-content font-weight-bold text-justify">
+            <div className="col-sm-12 col-md-6 brief-description-content font-weight-bold text-justify">
               <div>
                 <h2 className="uppercase"><b>TRUE INVEST</b></h2>
                 <h4 className="uppercase"><b>CỘNG ĐỒNG ĐẦU TƯ THẬT</b></h4>
@@ -22,16 +21,16 @@ const About = () => {
                 <p>Bằng phương pháp đầu tư riêng biệt, True Invest mong muốn tạo lập một <span className="highlight">CỘNG ĐỒNG ĐẦU TƯ THẬT</span> cho những nhà đầu tư với phương pháp dễ dàng tiếp cận nhưng vẫn mang hiệu quả cao.</p>
               </div>
             </div>
-            <div className="col-6 brief-description-img p-0"></div>
+            <div className="col-sm-12 col-md-6 brief-description-img p-0"></div>
           </div>
         </div>
       </div>
       <div className="detail-description container">
         <div className="text-center section-title">
-          <h3 className="uppercase"><span>TRỞ THÀNH NHÀ ĐẦU TƯ THÔNG MINH CÙNG TRUE INVEST</span></h3>
+          <h3 className="uppercase"><span>TRỞ THÀNH NHÀ ĐẦU TƯ <span className="sm-break"></span> THÔNG MINH <span className="md-break"></span> CÙNG TRUE INVEST</span></h3>
         </div>
         <div className="detail-description-content px-5">
-          <div className="d-flex justify-content-between">
+          <div className="d-flex flex-wrap justify-content-between">
             <div className="detail-description-section">
               <div className="detail-description-content-logo course-img">
                 <img src={courseImg} alt="Course Logo"/>

@@ -5,9 +5,10 @@ const MainLayout = (props) => {
   return (
     <div>
       <Header/>
-        <div className="mainContent">
-        {props.children}
-        </div>
+      <div className="header-blank"></div>
+      <div className="mainContent">
+      {props.children}
+      </div>
     </div>
   )
 }

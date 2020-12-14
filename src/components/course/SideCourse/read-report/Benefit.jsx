@@ -7,8 +7,8 @@ const Benefit = () => {
       <h1 className="section-title">sau khoá học bạn được gì?</h1>
       <div className="container">
         <div className="row">
-          <div className="col-6 img"></div>
-          <div className="col-6 content">
+          <div className="col-8 col-lg-6 img"></div>
+          <div className="col-12 col-lg-6 content">
             <BenefitList/>
           </div>
         </div>

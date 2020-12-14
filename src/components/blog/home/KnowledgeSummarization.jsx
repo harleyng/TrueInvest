@@ -16,15 +16,19 @@ const KnowledgeSumarization = () => {
     <div className="knowledge-summarization-wrap section">
       <div className="knowledge-summarization-content">
         <div className="section-title"><h1>kiến thức tổng hợp</h1></div>
-        <ul id="menu" className="d-flex justify-content-between">
-          <li><button value="SecuritiesInvestment" className="active" onClick={changeList}>đầu tư chứng khoán</button></li>
-          <li><button value="StockFilter" onClick={changeList}>lọc cổ phiếu</button></li>
-          <li><button value="ReadReport" onClick={changeList}>đọc báo cáo tài chính</button></li>
-          <li><button value="TechnicalAnalysis" onClick={changeList}>phân tích kĩ thuật</button></li>
-        </ul>
+        <div className="menu-container mx-5">
+          <ul id="menu" className="d-flex justify-content-between">
+            <li><button value="SecuritiesInvestment" className="active" onClick={changeList}>đầu tư chứng khoán</button></li>
+            <li><button value="StockFilter" onClick={changeList}>lọc cổ phiếu</button></li>
+            <li><button value="ReadReport" onClick={changeList}>đọc báo cáo tài chính</button></li>
+            <li><button value="TechnicalAnalysis" onClick={changeList}>phân tích kĩ thuật</button></li>
+          </ul>
+        </div>
         <div className="articles-wrap">
           <div className="articles-content">
-            <List listCategory={listName}/>
+            <div className="container">
+              <List listCategory={listName}/>
+            </div>
           </div>
         </div>
       </div>
