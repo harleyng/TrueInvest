@@ -2,7 +2,7 @@ import React from 'react';
 import MasterLayout from './layouts/masterlayout/MasterLayout'
 import MainLayout from './layouts/mainlayout/MainLayout'
 import BlogLayout from './layouts/bloglayout/BlogLayout'
-import { BrowserRouter,Switch,Route } from 'react-router-dom'
+import { BrowserRouter,Switch,Route, Redirect } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import 'owl.carousel/dist/owl.carousel.min.js'
@@ -25,6 +25,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+        <Redirect to="/home" />
         <MasterLayout>
           <Switch>
             <Route exact path="/home/:path?">

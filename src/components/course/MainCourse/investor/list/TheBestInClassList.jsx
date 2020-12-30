@@ -4,7 +4,6 @@ import TheBestInClassItem from '../../item/TheBestInClassItem'
 import Course from '../../../../../assets/img/course/protrader/khoa-hoc.png'
 import Curriculum from '../../../../../assets/img/course/protrader/giao-trinh.png'
 import Teacher from '../../../../../assets/img/course/protrader/giang-vien.png'
-import Provide from '../../../../../assets/img/course/protrader/cung-cap.png'
 
 const TheBestInClassList = () => {
 
