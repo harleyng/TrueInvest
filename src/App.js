@@ -25,18 +25,17 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Redirect to="/home" />
         <MasterLayout>
           <Switch>
-            <Route exact path="/home/:path?">
+            <Route exact path="/">
               <MainLayout>
                 <Switch>
-                  <Route exact path="/home" component={LandingPage}/>
+                  <Route exact path="/" component={LandingPage}/>
                 </Switch>
               </MainLayout>
             </Route>
 
-            <Route exact path='/course/:path?'>
+            <Route path='/course/:path?'>
               <MainLayout>
                 <Switch>
                   <Route exact path="/course/protrader20" component={ProTrader}/>
@@ -47,7 +46,7 @@ function App() {
               </MainLayout>
             </Route>
 
-            <Route exact path='/blog/:path?/:path?'>
+            <Route path='/blog/:path?/:path?'>
               <BlogLayout>
                 <Switch>
                   <Route exact path="/blog" component={Blog}/>
